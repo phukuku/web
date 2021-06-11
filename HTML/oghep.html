@@ -1,0 +1,642 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<title>Tìm bạn ở ghép</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../CSS/phongtro.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/oghep.css">   
+    <LINK REL="SHORTCUT ICON"  HREF="../Images/logo.ico">
+	 <style>
+
+	 </style>
+</head>
+<body>
+
+ <nav class=" navbar navbar-default navbar-fixed-top navbar-inverse">
+   <div class="row" > 
+    <a href="trangchu.html" style="margin-left: 60px"><img src="../Images/logoweb.png" height="80px">   </a>
+    <div class="aaa"><span>Kênh tìm trọ uy tín, an toàn nhất Việt Nam!</span> </div>
+      <a class="btn-success"  href="#tab_auth_login" data-toggle="modal" data-target="#modal_auth" style="background-color:#3961fb;">
+        <span class="glyphicon glyphicon-user"></span>&nbsp Đăng nhập</a>
+      <a class="btn-success" href="#tab_auth_register" data-toggle="modal" data-target="#modal_auth" style="background-color:#3961fb;">
+       <span class="glyphicon glyphicon-log-in "></span>&nbsp Đăng ký</a>   
+    </div>
+    
+  <div class="container-fluid" >
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>  
+        <span class="icon-bar"></span>    <!--3thanh ngang-->
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+       <ul class="nav navbar-nav">
+      <li><a href="trangchu.html" class="active">Trang chủ</a></li>
+      <li><a href="phongtro.html">Phòng trọ</a></li>
+      <li><a href="oghep.html">Tìm bạn ở ghép</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Blog<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="blog.html">Chia sẻ kinh nghiệm</a></li>
+          <li><a href="blog.html">Kết bạn bốn phương</a></li>
+          <li><a href="blog.html">Kĩ năng sống</a></li>
+        </ul>
+      </li>
+       <li><a href="https://baodanang.vn/">Tin tức nhanh</a></li>
+    </ul>
+      </li>
+  </div>
+  </div>
+</nav>
+
+
+
+<div class="modal fade" id="modal_auth" >
+    <div class="modal-dialog modal-md"  >
+        <div class="modal-content"  >
+            <div class="row-fluid" >
+                <div class="col-md-12"  style="background-color: #fff">
+                    <div class="modal_auth_wrap" >
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <ul class="nav nav-tabs no-margin">
+                             <li id="li_login" class="active"style="margin-left: 170px" ><a href="#tab_auth_login" data-toggle="tab">ĐĂNG NHẬP</a></li>
+                            <li id="li_register"  style=""><a href="#tab_auth_register" data-toggle="tab">ĐĂNG KÝ</a></li>
+                           
+                        </ul>
+                        <div class="tab-content">
+    <div class="tab-pane fade in active" id="tab_auth_login">
+         <form action="#" class="sign-in-form">
+            <h2 class="title">Đăng nhập</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Tài khoản ..." />
+            </div>
+             <div class="input-field">
+              <i class="fas fa-lock"></i>         
+              <input class="pass" type="password" placeholder="Mật khẩu ..." required />     
+               <span class="show">Hiện</span>
+            </div>
+         <button type="submit" class="btn btn-auth-submit" style="border-radius: 48px">Đăng nhập</button>
+            <p class="social-text">hoặc đăng nhập với</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+     </div>
+
+
+
+<div class="tab-pane fade" id="tab_auth_register">
+        <form action="#" >
+            <h2 class="title">Đăng ký</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Tài khoản ..." />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email ..." />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" class="pass" id="password" placeholder="Mật khẩu..." required="" >
+               <span class="show"><i class="far fa-eye" id="togglePassword"></i></span>
+            </div>      
+           <button type="submit" class="btn btn-auth-submit" style="border-radius: 48px">Đăng ký</button>
+            <p class="social-text">hoặc đăng ký với</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+</div>
+
+
+
+<div class="alert">
+    <marquee ><h3 style="margin-left: 50px">ĐÀ NẴNG TOP 3 PHÒNG TRỌ TẠI VIỆT NAM</h3></marquee>
+    <img class="img-responsive" src="../Images/tim.jpg" >
+          <div class="container">
+  
+            <div class="clearfix">
+               
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <p>Loại tin</p>
+                        <select class="form-control select2-hidden-accessible" >
+                            <option>Tất cả</option>
+                            <option>Phòng trọ, nhà trọ</option>
+                            <option>Chung cư, căn hộ</option>
+                            <option>Nhà nguyên căn</option>
+                            <option  selected="">Tìm bạn ở ghép</option>
+                        </select>
+
+                    </div>
+             
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <p>Quận huyện</p>
+                        <select  class="form-control select2-hidden-accessible">
+                            <option>Cẩm Lệ</option>
+                            <option>Hải Châu</option>
+                            <option>Hòa Vang</option>
+                            <option>Liên Chiểu</option>
+                            <option>Thanh Khê</option>
+                            <option>Ngũ Hành Sơn</option>
+                            <option>Sơn Trà</option>
+                        </select>
+                    </div>
+                  
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <p>Mức giá</p>
+                        <select class="form-control">
+                            <option>Dưới 1 triệu</option>
+                            <option>1 triệu - 2 triệu</option>
+                            <option>2 triệu - 3 triệu</option>
+                            <option>3 triệu - 5 triệu</option>
+                            <option>Trên 5 triệu</option>
+                            <option>Thỏa thuận</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <p>Diện tích</p>
+                        <select  class="form-control">
+                            <option >Dưới 20 m2</option>
+                            <option >20 - 50 m2</option>
+                            <option >50 - 100 m2</option>
+                            <option >Trên 100 m2</option>
+                        </select>
+                    </div>
+                     
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+      <a href="" class="btnseach"><button type="submit" class="btn btn-warning btn-block" ><i class="fa fa-search"></i> Tìm kiếm</button></a>
+                    </div>
+    </div>
+
+</div>
+</div>
+
+
+        <div class="" style="">
+       
+            <div class="menu-tab-title" style="margin-left:350px"><a href="">Tìm bạn ở ghép<i class="fa fa-angle-right"></i></a></div>
+            <div class="menu-tab-title-right">
+                <ul class="nav nav-tabs" style=" width: 46%; margin-left:350px  ">
+                  <li class=""><a href="#tab_type_3" data-toggle="tab">Giá thành rẻ</a></li>
+                  <li class=""><a href="#tab_type_2" data-toggle="tab">Giá thành cao</a></li>
+                  <li class="active"><a href="#tab_type_1" data-toggle="tab">Mới nhất</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+<div class="tab-content">
+
+    <div class="tab-pane active" id="tab_type_1">
+      <ul class="post-listing clearfix">
+         <li class="post-item clearfix " style="border-color: #3763e0;" >
+
+
+		<figure id="myCarousel" class="carousel slide" data-ride="carousel">
+	
+ 
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+       <div class="carousel-inner">
+              <div class="item active">
+                   <img class="lazy_done" src="../Images/oghep3.png">
+              </div>
+
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep.png" >
+              </div>
+       
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep1.png">
+              </div>
+               <span class="images-number">3 ảnh</span>
+       </div>
+
+         <!-- nút kéo qua trái, phải -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+             <span class="sr-only"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+             <span class="sr-only"></span>
+          </a>
+ 
+       </figure>
+
+
+	    <div class="post-meta">
+			<h3 class="post-title"><span class="star star-4"></span> CẦN 1 BẠN NAM Ở GHÉP TẠI ĐƯỜNG NAM KÌ KHỞI NGHĨA, PHÒNG HIỆN ĐÃ CÓ 2 NGƯỜI… </h3>
+	              <div class="meta-row clearfix">
+					    <span class="post-price">Giá:3,500,000/tháng/người</span>
+					    <time class="post-time">Cập nhật: Hôm nay</time>
+		          </div>
+		<div class="meta-row clearfix">
+				<span class="post-acreage">Diện tích: 25m²</span>
+				<span class="post-location">Địa điểm: Quận Ngũ Hành Sơn, Gần VKU,FPT,DU LỊCH...</span>
+		</div>
+				<p class="post-summary">Yêu cầu: Sạch sẽ, không hút thuốc, biết chơi game là lợi thế. Phòng thoáng mát,có gác lửng, có wifi free…
+                   <br>Liên hệ: <font size="2px" color="blue">0133991567</font> or Facebook:
+							<a style="font-size: 13px; color: blue">Văn Thắng</a>
+				</p>
+
+              	<span class="post-save js-btn-save" ><i></i></span>
+		</div>
+		</li>
+
+
+
+    <li class="post-item clearfix" style="border-color: #3763e0;">
+		  <figure id="myCarousel1" class="carousel slide" data-ride="carousel">
+	
+ 
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel1" data-slide-to="1"></li>
+      <li data-target="#myCarousel1" data-slide-to="2"></li>
+       <li data-target="#myCarousel1" data-slide-to="3"></li>
+    </ol>
+
+       <div class="carousel-inner">
+              <div class="item active">
+                  <img class="lazy_done" src="../Images/oghep10.png">
+              </div>
+
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep11.png">
+              </div>
+       
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep12.png">
+              </div>
+
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep13.png">
+              </div>
+        <span class="images-number">4 ảnh</span>      
+       </div>
+      
+         <!-- nút kéo qua trái, phải -->
+          <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+             <span class="sr-only"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel1" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+             <span class="sr-only"></span>
+          </a>
+ 
+       </figure>
+
+				
+					<div class="post-meta"><h3 class="post-title"><span class="star star-3"></span> Tìm bạn nữ ở ghép, tại đường võ chí công</h3>
+						<div class="meta-row clearfix"><span class="post-price">Giá:4,000,000/tháng/người</span>
+							<time class="post-time">Cập nhật: Hôm nay</time>
+						</div>
+							<div class="meta-row clearfix"><span class="post-acreage">Diện tích: 30m²</span><span class="post-location">
+								Địa điểm: Ngũ Hành Sơn
+							</span>
+						</div>
+						<p class="post-summary">Yêu cầu: Sạch sẽ, nấu ăn ngon là một lợi thế. Phòng đã có đầy đủ đồ dùng chỉ chờ người đến ở.
+							<font size="2px" color="red"><br>Liên hệ: 0149234567</font></p>
+
+
+              	<span class="post-save js-btn-save" ><i></i></span>
+						</div>
+
+					</li>
+
+
+	<li class="post-item clearfix " style="border-color: #3763e0;">
+					<figure>
+						<a href=""><img class="lazy_done" src="../Images/oghep7.png"></a>
+            <span class="images-number">1 ảnh</span>
+					</figure>
+					<div class="post-meta"><h3 class="post-title"><span class="star star-2"></span> Tìm bạn nữ ở ghép, tại đường võ chí công</h3>
+						<div class="meta-row clearfix"><span class="post-price">Giá:1,800,000/tháng/người</span>
+							<time class="post-time">Cập nhật: Hôm nay</time>
+						</div>
+							<div class="meta-row clearfix"><span class="post-acreage">Diện tích: 30m²</span><span class="post-location">
+								Địa điểm: Ngũ Hành Sơn
+							</span>
+						</div>
+						<p class="post-summary">Yêu cầu: Sạch sẽ, nấu ăn ngon là một lợi thế. Phòng đã có đầy đủ đồ dùng chỉ chờ người đến ở.
+							<br>Liên hệ: <font size="2px" color="blue">0149234567</font> or Facebook:
+							<a style="font-size: 13px; color: blue">Văn Tèo</a></p>
+
+              	<span class="post-save js-btn-save" ><i></i></span>
+						</div>
+					</li>
+
+</ul>
+</div>
+                                  
+
+  
+<div class="tab-pane " id="tab_type_2"> 
+     <ul class="post-listing clearfix">
+        <li class="post-item clearfix " style="border-color: #3763e0;">
+		  <figure id="myCarousel2" class="carousel slide" data-ride="carousel">
+ 
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel2" data-slide-to="1"></li>
+      <li data-target="#myCarousel2" data-slide-to="2"></li>
+    </ol>
+
+       <div class="carousel-inner">
+              <div class="item active">
+                  <img class="lazy_done" src="../Images/oghep.png">
+              </div>
+
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep5.png">
+              </div>
+       
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep6.png">
+              </div>
+       </div>
+
+         <!-- nút kéo qua trái, phải -->
+          <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+             <span class="sr-only"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+             <span class="sr-only"></span>
+          </a>
+ 
+       </figure>
+				
+		<div class="post-meta"><h3 class="post-title"><span class="star star-3"></span> Tìm bạn nam ở ghép, tại đường 2/9</h3>
+						<div class="meta-row clearfix"><span class="post-price">Giá:650,000/tháng/người</span>
+							<time class="post-time">Cập nhật: Hôm nay</time>
+						</div>
+							<div class="meta-row clearfix"><span class="post-acreage">Diện tích: 25m²</span><span class="post-location">
+								Địa điểm: Hải Châu
+							</span>
+						</div>
+						<p class="post-summary">Yêu cầu: Sạch sẽ, nấu ăn ngon là một lợi thế. Phòng đã có đầy đủ đồ dùng chỉ chờ người đến ở.
+							<br>Liên hệ: <font size="2px" color="blue">014774567</font> or Facebook:
+							<a style="font-size: 13px; color: blue">Văn Long</a></p>
+
+
+
+              	<span class="post-save js-btn-save" ><i></i></span>
+						</div>
+
+					</li>
+
+
+
+
+		<li class="post-item clearfix " style="border-color: #3763e0;">
+					<figure>
+						<a href=""><img class="lazy_done" src="../Images/oghep12.png"></a>
+					</figure>
+					<div class="post-meta"><h3 class="post-title"><span class="star star-4"></span> Tìm bạn nữ ở ghép, tại đường võ chí công</h3>
+						<div class="meta-row clearfix"><span class="post-price">Giá:800,000/tháng/người</span>
+							<time class="post-time">Cập nhật: Hôm nay</time>
+						</div>
+							<div class="meta-row clearfix"><span class="post-acreage">Diện tích: 30m²</span><span class="post-location">
+								Địa điểm: Ngũ Hành Sơn
+							</span>
+						</div>
+						<p class="post-summary">Yêu cầu: Sạch sẽ, nấu ăn ngon là một lợi thế. Phòng đã có đầy đủ đồ dùng chỉ chờ người đến ở.
+							<font size="2px" color="red"><br>Liên hệ: 0149234567</font></p>
+						<span class="post-save js-btn-save"><i></i></span>
+						</div>
+					</li>
+
+
+	<li class="post-item clearfix " style="border-color: #3763e0;">
+					<figure>
+						<a href=""><img class="lazy_done" src="../Images/oghep9.png" ></a>
+						
+					</figure>
+					<div class="post-meta"><h3 class="post-title"><span class="star star-3"></span> Tìm 1 bạn nam ở ghép, tại đường Nam Kì Khởi Nghĩa </h3>
+						<div class="meta-row clearfix"><span class="post-price">Giá:500,000/tháng/người</span>
+							<time class="post-time">Cập nhật:11/5/2021</time>
+						</div>
+							<div class="meta-row clearfix"><span class="post-acreage">Diện tích:20m²</span><span class="post-location">
+								Địa điểm: Ngũ Hành Sơn
+							</span>
+						</div>
+						<p class="post-summary">Yêu cầu: Sạch sẽ, nấu ăn ngon là một lợi thế. Phòng đã có đầy đủ đồ dùng chỉ chờ người đến ở.
+							<font size="2px" color="red"><br>Liên hệ: 0779234567</font></p>
+								<span class="post-save js-btn-save"><i></i></span>
+						</div>
+					</li>
+
+</ul>
+            
+
+</div>
+
+                
+
+
+<div class="tab-pane " id="tab_type_3">
+
+ <ul class="post-listing clearfix">
+        <li class="post-item clearfix " style="border-color: #3763e0;">
+      <figure id="myCarousel3" class="carousel slide" data-ride="carousel">
+ 
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel3" data-slide-to="1"></li>
+      <li data-target="#myCarousel3" data-slide-to="2"></li>
+    </ol>
+
+       <div class="carousel-inner">
+              <div class="item active">
+                  <img class="lazy_done" src="../Images/oghep1.png">
+              </div>
+
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep5.png">
+              </div>
+       
+              <div class="item">
+                   <img class="lazy_done" src="../Images/oghep6.png">
+              </div>
+       </div>
+
+         <!-- nút kéo qua trái, phải -->
+          <a class="left carousel-control" href="#myCarousel3" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+             <span class="sr-only"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel3" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+             <span class="sr-only"></span>
+          </a>
+ 
+       </figure>
+        
+    <div class="post-meta"><h3 class="post-title"><span class="star star-3"></span> Tìm bạn nam ở ghép, tại đường 2/9</h3>
+            <div class="meta-row clearfix"><span class="post-price">Giá:650,000/tháng/người</span>
+              <time class="post-time">Cập nhật: Hôm nay</time>
+            </div>
+              <div class="meta-row clearfix"><span class="post-acreage">Diện tích: 25m²</span><span class="post-location">
+                Địa điểm: Hải Châu
+              </span>
+            </div>
+            <p class="post-summary">Yêu cầu: Sạch sẽ, nấu ăn ngon là một lợi thế. Phòng đã có đầy đủ đồ dùng chỉ chờ người đến ở.
+              <br>Liên hệ: <font size="2px" color="blue">014774567</font> or Facebook:
+              <a style="font-size: 13px; color: blue">Văn Long</a></p>
+
+
+
+                <span class="post-save js-btn-save" ><i></i></span>
+            </div>
+
+          </li>
+
+
+
+
+    <li class="post-item clearfix " style="border-color: #3763e0;">
+          <figure>
+            <a href=""><img class="lazy_done" src="../Images/oghep5.png"></a>
+          </figure>
+          <div class="post-meta"><h3 class="post-title"><span class="star star-4"></span> Tìm bạn nữ ở ghép, tại đường võ chí công</h3>
+            <div class="meta-row clearfix"><span class="post-price">Giá:800,000/tháng/người</span>
+              <time class="post-time">Cập nhật: Hôm nay</time>
+            </div>
+              <div class="meta-row clearfix"><span class="post-acreage">Diện tích: 30m²</span><span class="post-location">
+                Địa điểm: Ngũ Hành Sơn
+              </span>
+            </div>
+            <p class="post-summary">Yêu cầu: Sạch sẽ, nấu ăn ngon là một lợi thế. Phòng đã có đầy đủ đồ dùng chỉ chờ người đến ở.
+              <font size="2px" color="red"><br>Liên hệ: 0149234567</font></p>
+            <span class="post-save js-btn-save"><i></i></span>
+            </div>
+          </li>
+
+
+  <li class="post-item clearfix " style="border-color: #3763e0;">
+          <figure>
+            <a href=""><img class="lazy_done" src="../Images/oghep6.png"></a>
+            
+          </figure>
+          <div class="post-meta"><h3 class="post-title"><span class="star star-3"></span> Tìm 1 bạn nam ở ghép, tại đường Nam Kì Khởi Nghĩa </h3>
+            <div class="meta-row clearfix"><span class="post-price">Giá:500,000/tháng/người</span>
+              <time class="post-time">Cập nhật:11/5/2021</time>
+            </div>
+              <div class="meta-row clearfix"><span class="post-acreage">Diện tích:20m²</span><span class="post-location">
+                Địa điểm: Ngũ Hành Sơn
+              </span>
+            </div>
+            <p class="post-summary">Yêu cầu: Sạch sẽ, nấu ăn ngon là một lợi thế. Phòng đã có đầy đủ đồ dùng chỉ chờ người đến ở.
+              <font size="2px" color="red"><br>Liên hệ: 0779234567</font></p>
+                <span class="post-save js-btn-save"><i></i></span>
+            </div>
+          </li>
+
+</ul>
+            
+
+
+</div>
+
+
+
+</div>
+
+
+   <div align="center">
+         <ul class="pager" >				
+            <li class="page-item"><a class="page-link" href="" rel="next">«</a></li>
+						<li class="page-item active"><span class="page-link">1</span></li>
+						<li class="page-item"><a class="page-link" href="">2</a></li>
+						<li class="page-item"><a class="page-link" href="">3</a></li>
+						<li class="page-item"><a class="page-link" href="">4</a></li>
+						<li class="page-item"><a class="page-link" href="">5</a></li>
+						<li class="page-item"><a class="page-link" href="" rel="next">»</a></li>
+					</ul>
+   </div>
+				</section>
+
+
+
+<div class="footer-deco"></div>
+
+  <div class="row" style="padding: 20px 0;  background-color: #205597; color:#fff" align="center">
+    <div class="col-md-4">
+       <h3>Mục tiêu</h3>
+       <p>Chúng tôi với mục tiêu và sứ mạnh giúp các bạn tìm một chỗ ở<br> thật an toàn, cung cấp đầy đủ các thông tin phòng trọ,<br> nhà nguyên căn uy tín, giá rẻ tại thành phố <br>Đà Nẵng </p>
+    </div>
+    <div class="col-md-4" >
+       <h3>Dịch vụ</h3>
+        <div >
+         <p>Tìm phòng trọ,nhà trọ</p>
+         <p>Tìm bạn ở ghép</p>
+         <p>Cho thuê căn hộ</p>
+         <p>Cho thuê nhà nguyên căn</p>
+    </div>
+  </div>
+    <div class="col-md-4"   style="">
+       <h3>Liên hệ</h3>    
+     <div >
+          <p><i class="fas fa-home mr-3"></i> VKU</p>
+          <p ><i class="fas fa-envelope mr-3"></i> lvp.20it3@vku.udn.vn</p>
+          <p ><i class="fas fa-phone mr-3"></i> 0123456789</p>
+          <p ><i class="fas fa-print mr-3"></i> Gọi 113 nếu có vấn đề gấp </p>
+     </div>
+  </div>
+
+<div style="">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </div>
+<div style="margin-top: 15px; font-size: 12px">Copyright © 2021 - Lê Phú </div>
+  </div>
+
+
+    <script src="../Jscript/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+    

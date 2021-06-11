@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <!--link chữ--> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="../CSS/phongtro.css">
+    <LINK REL="SHORTCUT ICON"  HREF="../Images/logo.ico">
+    <style>
+ 
+    </style>
+</head>
+<body>
+
+
+
+ <nav class=" navbar navbar-default navbar-fixed-top navbar-inverse">
+   <div class="row" >
+     <a href="trangchu.html" style="margin-left: 60px"><img src="../Images/logoweb.png" height="80px">   </a>
+    <div class="aaa"><span>Kênh tìm trọ uy tín, an toàn nhất Việt Nam!</span>  </div>
+      <a class="btn-success"  href="#tab_auth_login" data-toggle="modal" data-target="#modal_auth" style="background-color:#3961fb;">
+        <span class="glyphicon glyphicon-user"></span>&nbsp Đăng nhập</a>
+      <a class="btn-success" href="#tab_auth_register" data-toggle="modal" data-target="#modal_auth" style="background-color:#3961fb;">
+       <span class="glyphicon glyphicon-log-in "></span>&nbsp Đăng ký</a>
+               </div>
+
+
+  <div class="container-fluid" >
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>  
+        <span class="icon-bar"></span>    <!--3thanh ngang-->
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+       <ul class="nav navbar-nav">
+      <li><a href="trangchu.html" class="active">Trang chủ</a></li>
+      <li><a href="phongtro.html">Phòng trọ</a></li>
+      <li><a href="oghep.html">Tìm bạn ở ghép</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Blog<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="blog.html">Chia sẻ kinh nghiệm</a></li>
+          <li><a href="blog.html">Kết bạn bốn phương</a></li>
+          <li><a href="blog.html">Kĩ năng sống</a></li>
+        </ul>
+      </li>
+       <li><a href="https://baodanang.vn/">Tin tức nhanh</a></li>
+    </ul>
+      </li>
+  </div>
+  </div>
+</nav>
+
+<div class="modal fade" id="modal_auth" >
+    <div class="modal-dialog modal-md"  >
+        <div class="modal-content"  >
+            <div class="row-fluid" >
+                <div class="col-md-12"  style="background-color: #fff">
+                    <div class="modal_auth_wrap" >
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <ul class="nav nav-tabs no-margin">
+                             <li id="li_login" class="active"style="margin-left: 170px" ><a href="#tab_auth_login" data-toggle="tab">ĐĂNG NHẬP</a></li>
+                            <li id="li_register"  style=""><a href="#tab_auth_register" data-toggle="tab">ĐĂNG KÝ</a></li>
+                           
+                        </ul>
+                        <div class="tab-content">
+    <div class="tab-pane fade in active" id="tab_auth_login">
+         <form action="#" class="sign-in-form">
+            <h2 class="title">Đăng nhập</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Tài khoản ..." />
+            </div>
+             <div class="input-field">
+              <i class="fas fa-lock"></i>         
+              <input class="pass" type="password" placeholder="Mật khẩu ..." required />     
+               <span class="show">Hiện</span>
+            </div>
+         <button type="submit" class="btn btn-auth-submit" style="border-radius: 48px">Đăng nhập</button>
+            <p class="social-text">hoặc đăng nhập với</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+     </div>
+
+
+
+<div class="tab-pane fade" id="tab_auth_register">
+        <form action="#" >
+            <h2 class="title">Đăng ký</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Tài khoản ..." />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email ..." />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" class="pass" id="password" placeholder="Mật khẩu..." required="" >
+               <span class="show"><i class="far fa-eye" id="togglePassword"></i></span>
+            </div>  
+           <button type="submit" class="btn btn-auth-submit" style="border-radius: 48px">Đăng ký</button>
+            <p class="social-text">hoặc đăng ký với</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+</div>
+
+
+<ul class="breadcrumb" style="margin-top: 130px;margin-left: 50px">
+            <li class="breadcrumb-item"><a href="trangchu.html">TRANG CHỦ</a></li>
+            <li class="breadcrumb-item"><a href="#"><font color="red">BLOG</font></a></li>
+         </ul>
+
+    
+    <div class="page_content" style="margin-left: 25px;margin-top: -20px">
+        <div class="row">
+            <div class="view-detail">
+                <div class="col-xs-12 col-md-8 block-left">
+                    <h1 style="font-size:30px;"> CHIA SẼ KINH NGHIỆM</h1>              
+&nbsp;Việc tìm phòng trọ tại thành phố là một trong những nhu cầu ngày càng tăng của mọi người qua mỗi năm, biết được điều này chúng tôi sẽ chia sẽ một vài kinh nghiệm cho mọi người, đặc biệt là các bạn sinh viên mới bước vào cánh cửa Đại học.
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:20px"><span style="color:#c0392b"><strong>1️⃣  Hướng dẫn tìm phòng</strong></span></span></p>
+
+
+<p><span style="color:#27ae60"><u><strong>📣 Chọn phòng thật kĩ càng:</strong></u></span></p>
+<p>&diams; Cần phải xem đầy đủ về giá cả cũng như vị trí của phòng.</p>
+<p>&diams; Cần đảm bảo đủ các yếu tố an toàn về phòng, yếu tố khách quan.</p>
+<p>&diams; Cần đảo bảo các yếu tố về môi trường xung quanh có sạch sẽ, an toàn không.</p>
+<p>&nbsp;</p>
+
+<p><span style="font-size:20px"><span style="color:#c0392b"><strong>2️⃣ Hướng dẫn tìm bạn ở ghép</strong></span></span></p>
+
+
+<p><span style="color:#27ae60"><u><strong>📣 Tìm bạn phải rõ ràng:</strong></u></span></p>
+<p>&diams; Cần tìm hiểu đầy đủ thông tin người bạn muốn ở ghép, chúng tôi đã đăng tải khá đủ thông tin chỉ cần bạn liên hệ và trao đổi.</p>
+
+<p>&diams; Khi đã muốn ở với nhau thì phải thống nhất các vấn về tiền bạc,quản lí phòng với nhau tránh tình trạng xảy ra hiểu lầm sau khi ở chung.</p>
+
+<p>&diams; Cần tôn trọng bạn cùng ở ghép với mình.</p>
+
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:20px"><span style="color:#c0392b"><strong>3️⃣ Về trang web</strong></span></span></p>
+<p>🔸&nbsp;<strong>Dễ sử dụng</strong>: Trang web với giao diện hơi xấu nhưng phù hợp với như cầu người dùng.</p>
+<p>🔸&nbsp;<strong>Miễn phí</strong>: Tìm khắp nơi đâu cũng đều tốn phí, vì vậy hãy đến với chúng tôi, bạn có thể tìm được phòng yêu thích còn chúng tôi thì được niềm tin của bạn.</p>
+<p>🔸&nbsp;<strong>Không lừa đảo</strong>: Chúng tôi đại diện cho người tốt việc tốt, nói không với lừa đảo và thực hiện đúng quy định pháp luật.</p>
+
+<p>&nbsp;</p>
+
+<p><span style="color:#27ae60"><span style="font-size:16px"><strong><u>Mọi thắc mắc xin liên hệ:</u></strong></span></span></p>
+
+<ul>
+	<li> &nbsp; ☎ Hotline: <strong>19001009</strong></li>
+	<li>&nbsp; ✉ Email: <strong>lvphu.20it3@vku.udn.vn</strong></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>--------------------------------------------------------</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+
+<div class="footer-deco"></div>
+
+  <div class="row" style="padding: 20px 0;  background-color: #205597; color:#fff;width:110%" align="center">
+    <div class="col-md-4">
+       <h3>Mục tiêu</h3>
+       <p>Chúng tôi với mục tiêu và sứ mạnh giúp các bạn tìm một chỗ ở<br> thật an toàn, cung cấp đầy đủ các thông tin phòng trọ,<br> nhà nguyên căn uy tín, giá rẻ tại thành phố <br>Đà Nẵng </p>
+    </div>
+    <div class="col-md-4" >
+       <h3>Dịch vụ</h3>
+        <div>
+         <p>Tìm phòng trọ,nhà trọ</p>
+         <p>Tìm bạn ở ghép</p>
+         <p>Cho thuê căn hộ</p>
+         <p>Cho thuê nhà nguyên căn</p>
+    </div>
+  </div>
+    <div class="col-md-4"   style="">
+       <h3>Liên hệ</h3>    
+     <div>
+          <p><i class="fas fa-home mr-3"></i> VKU</p>
+          <p ><i class="fas fa-envelope mr-3"></i> lvp.20it3@vku.udn.vn</p>
+          <p ><i class="fas fa-phone mr-3"></i> 0123456789</p>
+          <p ><i class="fas fa-print mr-3"></i> Gọi 113 nếu có vấn đề gấp </p>
+     </div>
+  </div>
+
+<div style="">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </div>
+<div style="margin-top: 15px; font-size: 12px">Copyright © 2021 - Lê Phú </div>
+  </div>
+
+
+     <script src="../Jscript/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

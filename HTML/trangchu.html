@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Trang chủ</title> 
+    <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">link chữ-->  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet"><!--link animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/><!--icon-->
+    <LINK REL="SHORTCUT ICON"  HREF="../Images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="../CSS/trangchu.css">
+<style>
+</style>
+</head>
+<body>
+
+
+ <nav class=" navbar navbar-default navbar-fixed-top navbar-inverse">
+    
+     <div class="row" >
+        <a href="trangchu.html"style="margin-left: 60px"><img src="../Images/logoweb.png" height="80px" >   </a>
+    <div class="aaa"><span>Kênh tìm trọ uy tín, an toàn nhất Việt Nam!</span>  </div>
+      <a class="btn-success"  href="#tab_auth_login" data-toggle="modal" data-target="#modal_auth" style="background-color:#3961fb;">
+        <span class="glyphicon glyphicon-user"></span>&nbsp Đăng nhập</a>
+      <a class="btn-success" href="#tab_auth_register" data-toggle="modal" data-target="#modal_auth" style="background-color:#3961fb;">
+       <span class="glyphicon glyphicon-log-in "></span>&nbsp Đăng ký</a>
+      
+  <div class="container-fluid" >
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>  
+        <span class="icon-bar"></span>    <!--3thanh ngang-->
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="trangchu.html" class="active">Trang chủ</a></li>
+      <li><a href="phongtro.html">Phòng trọ</a></li>
+      <li><a href="oghep.html">Tìm bạn ở ghép</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Blog<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="blog.html">Chia sẻ kinh nghiệm</a></li>
+          <li><a href="blog.html">Kết bạn bốn phương</a></li>
+          <li><a href="blog.html">Kĩ năng sống</a></li>
+        </ul>
+      </li>
+       <li><a href="https://baodanang.vn/">Tin tức nhanh</a></li>
+    </ul>
+  </div>
+  </div>
+</div>
+</nav>
+
+
+ <div class="modal fade" id="modal_auth" >
+    <div class="modal-dialog modal-md"  >
+        <div class="modal-content"  >
+            <div class="row-fluid" >
+                <div class="col-md-12"  style="background-color: #fff">
+                    <div class="modal_auth_wrap" >
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <ul class="nav nav-tabs no-margin">
+                            <li id="li_login" class="active" style="margin-left: 170px"><a href="#tab_auth_login" data-toggle="tab">ĐĂNG NHẬP</a></li>
+                            <li id="li_register"  style=""><a href="#tab_auth_register" data-toggle="tab">ĐĂNG KÝ</a></li>
+                        </ul>
+                        <div class="tab-content">
+    <div class="tab-pane fade in active" id="tab_auth_login">
+         <form action="#" class="sign-in-form">
+            <h2 class="title">Đăng nhập</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Tài khoản ..." required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>         
+              <input class="pass" type="password" placeholder="Mật khẩu ..." required />     
+               <span class="show">Hiện</span>
+
+            </div>
+         <button type="submit" class="btn btn-auth-submit" style="border-radius: 48px">Đăng nhập</button>
+            <p class="social-text">hoặc đăng nhập với</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+     </div>
+
+
+
+<div class="tab-pane fade " id="tab_auth_register">
+        <form action="#" >
+            <h2 class="title">Đăng ký</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Tài khoản ..."required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email ..."required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" class="pass" id="password" placeholder="Mật khẩu..." required="" >
+               <span class="show"><i class="far fa-eye" id="togglePassword"></i></span>
+            </div>
+
+             <button type="submit" class="btn btn-auth-submit" style="border-radius: 48px">Đăng ký</button>
+            <p class="social-text">hoặc đăng ký với</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+</div>
+ 
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-top: 130px">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+        
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="banner" style="background-image: url(../Images/header1.jpg);"></div>
+               <div class="carousel-caption">
+                    <h1 class="animated zoomIn" style="animation-delay: 1s">Tìm phòng trọ tại Đà nẵng</h2>
+                    <h2 class="animated bounceInLeft" style="animation-delay: 2s">Cùng Với Chúng Tôi</h3>
+                    <p class="animated zoomIn" style="animation-delay: 3s"><a href="phongtro.html">Tìm Phòng Ngay</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="banner" style="background-image: url(../Images/header2.jpg)"></div>
+                <div class="carousel-caption">
+                    <h1 class="animated slideInDown" style="animation-delay: 1s"><span>Tìm bạn ở ghép</span></h2>
+                    <h2 class="animated fadeInUp" style="animation-delay: 2s">Dễ dàng, đơn giản</h3>
+                    <p class="animated zoomIn" style="animation-delay: 3s"><a href="oghep.html">Tìm bạn ngay</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="banner" style="background-image: url(../Images/header3.jpg)"></div>
+                <div class="carousel-caption">
+                    <h1 class="animated bounceInRight" style="animation-delay: 1s"><span>Đà Nẵng TOP 3 HOMESTAYS</span></h2>
+                    <h2 class="animated fadeInLeft" style="animation-delay: 2s">Tìm Kiếm Đơn Giản</h3>
+                    <p class="animated zoomIn" style="animation-delay: 3s"><a href="phongtro.html">Liên Hệ Ngay</a></p>
+                 </div>
+            </div>
+
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>   
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </a>
+        </div>
+
+    </header>
+
+
+
+
+<h2 class="text-center" style="font-family: monospace;">Khu vực nổi bật</h2>
+<br><br>
+<div class="container">
+<div class="row">
+
+<div class="col-lg-8 col-md-6 col-sm-12 ">
+    <div class="hovereffects">
+        <img src="../Images/lienchieu.jpg" height="300px" width="100%" alt="images">
+        <div class="overlay">
+            <h2>Liên Chiểu</h2>
+            <a class="info" href="phongtro.html">Xem</a>
+        </div>
+</div>
+</div>
+
+
+<div class="col-lg-4 col-md-6 col-sm-12 ">
+    <div class="hovereffects">
+        <img src="../Images/haichau.jpg" height="300px" width="100%" alt="images">
+        <div class="overlay">
+            <h2>Hải Châu</h2>
+            <a class="info" href="phongtro.html">Xem</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="hovereffects">
+        <img src="../Images/camle.jpg" height="300px" width="100%" alt="images">
+        <div class="overlay">
+            <h2>Cẩm Lệ</h2>
+            <a class="info" href="phongtro.html">Xem</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="hovereffects">
+        <img src="../Images/hoavang.jpg" height="300px" width="100%" alt="images">
+        <div class="overlay">
+            <h2>Hòa Vang</h2>
+            <a class="info" href="phongtro.html">Xem</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="col-lg-4 col-md-6 col-sm-12 ">
+    <div class="hovereffects">
+        <img src="../Images/sontra.png" height="300px" width="100%" alt="images">
+        <div class="overlay">
+            <h2>Sơn Trà</h2>
+            <a class="info" href="phongtro.html">Xem</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 ">
+    <div class="hovereffects">
+        <img src="../Images/thankhe.jpg" height="300px" width="100%" alt="images">
+        <div class="overlay">
+            <h2>Thanh Khê </h2>
+            <a class="info" href="phongtro.html">Xem</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="col-lg-8 col-md-6 col-sm-12 ">
+    <div class="hovereffects">
+        <img src="../Images/nha3.png" height="300px" width="100%" alt="images">
+        <div class="overlay">
+            <h2>NGŨ HÀNH SƠN</h2>
+            <a class="info" href="phongtro.html">Xem</a>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+
+    <div class="container">
+        <div class="title-section">
+            <h2 class="" align="center">CHÚNG TÔI CÓ THỂ GIÚP BẠN ĐƯỢC GÌ ?</h2>
+            <span class="border-icon">
+                <span class="title-icon"></span>
+            </span>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="flat-iconbox" align="center">
+                    <div class="icon">
+                        <img src="../Images/co.png">
+                    </div>
+                    <div class="content">
+                        <div class="title" style="margin-bottom: 10px">PHÙ HỢP</div>                        
+                        <p>Tìm được những phòng trọ, nhà ở sạch sẽ, không gian thoáng mát, giá cả phải chăng, phù hợp với bạn. </p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flat-iconbox" align="center">
+                    <div class="icon">                            
+                        <img src="../Images/co1.png">
+                    </div>
+                    <div class="content">
+                        <div class="title"  style="margin-bottom: 10px">AN TOÀN</div>                        
+                        <p>Chúng tôi luôn bảo vệ quyền và lợi ích của bạn.Bạn sẽ tìm được chỗ ở thích hợp mà không sợ bị lừa đảo </p> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="flat-iconbox" align="center">
+                    <div class="icon">
+                        <img src="../Images/co2.png">
+                    </div>
+                    <div class="content">
+                        <div class="title"  style="margin-bottom: 10px">HỖ TRỢ TẬN TÌNH</div>                        
+                        <p>Đội ngũ chúng tôi với những thành viên có trách nhiệm cao, luôn sẵn sàng hỗ trợ bạn. </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+
+<div class="footer-deco"></div>
+
+  <div class="row" style="padding: 20px 0;  background-color: #205597; color:#fff" align="center">
+    <div class="col-md-4">
+       <h3>Mục tiêu</h3>
+       <p>Chúng tôi với mục tiêu và sứ mạnh giúp các bạn tìm một chỗ ở<br> thật an toàn, cung cấp đầy đủ các thông tin phòng trọ,<br> nhà nguyên căn uy tín, giá rẻ tại thành phố <br>Đà Nẵng </p>
+    </div>
+    <div class="col-md-4" >
+       <h3>Dịch vụ</h3>
+        <div >
+         <p>Tìm phòng trọ,nhà trọ</p>
+         <p>Tìm bạn ở ghép</p>
+         <p>Cho thuê căn hộ</p>
+         <p>Cho thuê nhà nguyên căn</p>
+    </div>
+  </div>
+    <div class="col-md-4"   style="">
+       <h3>Liên hệ</h3>    
+     <div >
+          <p><i class="fas fa-home mr-3"></i> VKU</p>
+          <p ><i class="fas fa-envelope mr-3"></i> lvp.20it3@vku.udn.vn</p>
+          <p ><i class="fas fa-phone mr-3"></i> 0123456789</p>
+          <p ><i class="fas fa-print mr-3"></i> Gọi 113 nếu có vấn đề gấp </p>
+     </div>
+  </div>
+
+<div style="">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  </div>
+<div style="margin-top: 15px; font-size: 12px">Copyright © 2021 - Lê Phú </div>
+  </div>
+
+
+     <script src="../Jscript/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

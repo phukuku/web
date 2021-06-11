@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 13px;
+}
+
+p {
+  line-height: 1.5;/*chữ nhỏ dưới cùng*/
+}
+
+
+ul,
+li,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-listing{
+padding: 10px 150px; /*padding danh sách tìm ở ghép*/
+}
+figure {
+  margin: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f1f1f1; /*ảnh*/
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*ảnh max*/
+}
+
+
+.post-listing .post-item {
+  display: flex;
+  padding: 15px 10px;
+  border: 1px solid #ddd;      /*cho ảnh chữ nằm ngang nhau*/
+  margin: 0;
+  margin-top: -1px;
+  background-color: #fff;
+  z-index: 0;
+  position: relative;
+}
+.carousel-indicators li {
+    width: 8px;   /*size 3 nút*/
+    height: 8px;
+
+}
+.carousel-indicators .active {
+    width: 9px;    /*size nút chạy*/
+    height: 9px;
+   
+}
+
+.post-listing .post-item figure {
+  width: 150px;
+  height: 150px;      /*ảnh*/
+  position: relative;
+  overflow: initial;
+
+}
+ .carousel-inner>.item>img {
+    height: 150px; /* cho chiều dài bằng khung*/
+}
+.left>.glyphicon,.right>.glyphicon {     /*nút kéo qua kéo lại*/
+    font-size: 14px;
+    color: #000000;
+   
+}
+.carousel-control.right,.carousel-control.left {
+    background-image:none;
+}
+.post-listing .post-item figure img {  /*hiệu ứng ảnh*/
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+.post-listing .post-item figure img.lazy_done { /*hiệu ứng ảnh*/
+  opacity: 1;
+}
+
+.post-listing .post-item .images-number {
+  position: absolute;
+  bottom: 8px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 3px;       /*số ảnh*/
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.post-listing .post-item .post-save  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;      /*trái tim*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+}
+.post-listing .post-item .post-save i {
+    width: 20px;
+    height: 20px;
+    background: url(like.png) center no-repeat; /*trái tim*/
+    background-size: contain;
+    display: inline-block;
+}
+.post-listing .post-item .post-save  :hover {
+    width: 20px;
+    height: 20px;
+    background: url(like1.png) center no-repeat; /*trái tim hồng*/
+    background-size: contain;
+    display: inline-block;
+ 
+}
+.post-listing .post-item .post-meta {
+  margin-left: 10px;    /*kéo chữ qua*/
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.post-listing .post-item .post-title {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: bold;
+  display: block;
+  white-space: normal;
+  margin: 0 0 10px;
+  color: #3763e0;
+  display: block;            /*chữ trên cùng tìm bạn ở ghép*/
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.post-listing .post-item .post-price,
+.post-listing .post-item .post-acreage,
+.post-listing .post-item .post-location,  /*khoảng các từng dòng*/
+.post-listing .post-item .post-summary,
+.post-listing .post-item .post-time {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  color: #333;
+}
+.post-listing .post-item .post-price {
+  font-size: 1.2rem;
+  font-weight: bold;    /*giá tiền*/
+  color: #16c784;
+}
+.post-listing .post-item .post-time {
+  float: right;
+  margin-right: 0;    /*thời gian*/
+  color: #808080;
+}
+
+.post-listing .post-item .post-summary {
+  margin: 10px 0 0;
+  color: #808080;
+  font-size: 0.95rem;   /*chữ nhỏ dưới cùng*/
+}
+
+.star {
+  background: url(star2.png) left center repeat-x;
+  background-size: 14px 14px;
+  display: inline-block;
+  margin-right: 3px;
+  float: left;
+}
+.star.star-5 {
+  width: 70px;
+  height: 17px;
+}
+.star.star-4 {
+  width: 56px;
+  height: 17px;
+}
+.star.star-3 {
+  width: 42px;
+  height: 17px;
+}
+.star.star-2 {
+  width: 28px;
+  height: 17px;
+}
+

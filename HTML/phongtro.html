@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Phòng trọ</title>
+        
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"> <!--link chữ--> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="../CSS/phongtro.css">
+  <LINK REL="SHORTCUT ICON"  HREF="../Images/logo.ico">
+<style >
+
+</style>
+</head>
+<body>
+
+
+ <nav class=" navbar navbar-default navbar-fixed-top navbar-inverse">
+   <div class="row" >
+    <a href="trangchu.html" style="margin-left: 60px"><img src="../Images/logoweb.png" height="80px">   </a>
+    <div class="aaa"><span>Kênh tìm trọ uy tín, an toàn nhất Việt Nam!</span>  </div>
+      <a class="btn-success"  href="#tab_auth_login" data-toggle="modal" data-target="#modal_auth" style="background-color:#3961fb;">
+        <span class="glyphicon glyphicon-user"></span>&nbsp Đăng nhập</a>
+      <a class="btn-success" href="#tab_auth_register" data-toggle="modal" data-target="#modal_auth" style="background-color:#3961fb;">
+       <span class="glyphicon glyphicon-log-in "></span>&nbsp Đăng ký</a>
+</div>
+
+  <div class="container-fluid" >
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>  
+        <span class="icon-bar"></span>    <!--3thanh ngang-->
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+       <ul class="nav navbar-nav">
+      <li><a href="trangchu.html" class="active">Trang chủ</a></li>
+      <li><a href="phongtro.html">Phòng trọ</a></li>
+      <li><a href="oghep.html">Tìm bạn ở ghép</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Blog<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="blog.html">Chia sẻ kinh nghiệm</a></li>
+          <li><a href="blog.html">Kết bạn bốn phương</a></li>
+          <li><a href="blog.html">Kĩ năng sống</a></li>
+        </ul>
+      </li>
+       <li><a href="https://baodanang.vn/">Tin tức nhanh</a></li>
+    </ul>
+      </li>
+  </div>
+  </div>
+</nav>
+
+
+<div class="modal fade" id="modal_auth" >
+    <div class="modal-dialog modal-md"  >
+        <div class="modal-content"  >
+            <div class="row-fluid" >
+                <div class="col-md-12"  style="background-color: #fff">
+                    <div class="modal_auth_wrap" >
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <ul class="nav nav-tabs no-margin">
+                             <li id="li_login" class="active"style="margin-left: 170px" ><a href="#tab_auth_login" data-toggle="tab">ĐĂNG NHẬP</a></li>
+                            <li id="li_register"  style=""><a href="#tab_auth_register" data-toggle="tab">ĐĂNG KÝ</a></li>
+                           
+                        </ul>
+                        <div class="tab-content">
+    <div class="tab-pane fade in active" id="tab_auth_login">
+         <form action="#" class="sign-in-form">
+            <h2 class="title">Đăng nhập</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Tài khoản ..." required />
+            </div>
+             <div class="input-field">
+              <i class="fas fa-lock"></i>         
+              <input class="pass" type="password" placeholder="Mật khẩu ..." required />     
+               <span class="show">Hiện</span>
+            </div>
+         <button type="submit" class="btn btn-auth-submit" style="border-radius: 48px">Đăng nhập</button>
+            <p class="social-text">hoặc đăng nhập với</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+     </div>
+
+
+
+<div class="tab-pane fade" id="tab_auth_register">
+        <form action="#" >
+            <h2 class="title">Đăng ký</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Tài khoản ..."required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email ..."required  />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" class="pass" id="password" placeholder="Mật khẩu..." required="" >
+               <span class="show"><i class="far fa-eye" id="togglePassword"></i></span>
+            </div>
+           <button type="submit" class="btn btn-auth-submit" style="border-radius: 48px">Đăng ký</button>
+            <p class="social-text">hoặc đăng ký với</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+</div>
+
+
+<div class="alert">
+    <marquee ><h3 style="margin-left: 50px">ĐÀ NẴNG TOP 3 PHÒNG TRỌ TẠI VIỆT NAM</h3></marquee>
+    <img class="img-responsive" src="../Images/tim.jpg" >
+          <div class="container">
+  
+            <div class="clearfix">
+               
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <p>Loại tin</p>
+                        <select class="form-control select2-hidden-accessible" >
+                            <option>Tất cả</option>
+                            <option selected="">Phòng trọ, nhà trọ</option>
+                            <option>Chung cư, căn hộ</option>
+                            <option>Nhà nguyên căn</option>
+                            <option>Tìm bạn ở ghép</option>
+                        </select>
+
+                    </div>
+             
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <p>Quận huyện</p>
+                        <select  class="form-control select2-hidden-accessible">
+                            <option>Cẩm Lệ</option>
+                            <option>Hải Châu</option>
+                            <option>Hòa Vang</option>
+                            <option>Liên Chiểu</option>
+                            <option>Thanh Khê</option>
+                            <option>Ngũ Hành Sơn</option>
+                            <option>Sơn Trà</option>
+                        </select>
+                    </div>
+                  
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <p>Mức giá</p>
+                        <select class="form-control">
+                            <option>Dưới 1 triệu</option>
+                            <option>1 triệu - 2 triệu</option>
+                            <option>2 triệu - 3 triệu</option>
+                            <option>3 triệu - 5 triệu</option>
+                            <option>Trên 5 triệu</option>
+                            <option>Thỏa thuận</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <p>Diện tích</p>
+                        <select  class="form-control">
+                            <option >Dưới 20 m2</option>
+                            <option >20 - 50 m2</option>
+                            <option >50 - 100 m2</option>
+                            <option >Trên 100 m2</option>
+                        </select>
+                    </div>
+                     
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+      <a href="" class="btnseach"><button type="submit" class="btn btn-warning btn-block" ><i class="fa fa-search"></i> Tìm kiếm</button></a>
+                    </div>
+    </div>
+
+</div>
+</div>
+
+     <div class="">
+        <div class="menu-tab-title" style="margin-left:300px"><a href="">Thông tin<i class="fa fa-angle-right"></i></a></div>
+          <div class="menu-tab-title-right">
+              <ul class="nav nav-tabs " style=" width: 57%; margin-left:290px">
+                  <li class=""><a href="#tab_type_4" data-toggle="tab">Chung cư, căn hộ</a></li>
+                  <li class=""><a href="#tab_type_3" data-toggle="tab">Nhà nguyên căn</a></li>
+                  <li class=""><a href="#tab_type_2" data-toggle="tab" >Phòng trọ, nhà trọ</a></li>
+                  <li class="active"><a href="#tab_type_1" data-toggle="tab">Tất cả</a></li>
+              </ul>
+          </div>
+  </div>
+
+
+
+<div class="tab-content">
+    <div class="tab-pane active" id="tab_type_1">
+        <div class="thumbnail-list">
+            <div class="row block-item">
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">5,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Cho thuê căn hộ tuyệt đẹp, gần cầu Rồng, giá 8 tr/tháng</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Hải Châu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>50 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Chung cư, căn hộ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>       
+
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+   <div class="thumbnail">
+      <a href="thongtinnha.html" title="">
+       <img src="../Images/tro4.jpg" class="cover img-reponsive" >
+        </a>
+        <div class="room-item-price">
+            <a href="">3,500,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Cho thuê phòng vừa mới xây, phòng đẹp, có gác </a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Sơn trà</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>25 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Nhà trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>       
+
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro3.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">1,800,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Phòng trọ đẹp, ưu tiên sinh viên  </a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Thanh Khê</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>20 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>         
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html">
+            <img src="../Images/tro1.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">7,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Nhà đẹp đầy đủ nội thất</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Liên Chiểu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>30 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Nhà nguyên căn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>      
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro5.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">1.200,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Phòng trọ giá rẻ, có gác lửng, ở Ngũ Hành Sơn</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Ngũ Hành Sơn</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>15 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro6.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">900,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Phòng trọ sinh viên, gần nhiều khu vui chơi</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Ngũ Hành Sơn</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>22 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>         
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" >
+            <img src="../Images/tro7.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">1,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Phòng trọ giá rẻ chỉ từ 1 triệu đồng ở Hòa Vang</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Hòa Vang</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>20 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>             
+
+
+
+  
+ <div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro8.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">10,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Cho thuê nhà mặt tiền, gần biển, gần nhiều khu vui chơi,đồ đạc đầy đủ, tiện nghi </a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Sơn Trà</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>100 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Nhà nguyên căn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                   
+
+
+
+ <div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro9.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">3,500,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Nhà đẹp, có gác lửng, gần trung tâm thành phố</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Hải Châu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>30 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+</div>
+</div>
+</div>
+                                  
+
+  
+<div class="tab-pane " id="tab_type_2">   <!--phòng trọ nhà trọ -->
+    <div class="thumbnail-list">
+         <div class="row block-item">
+
+
+   <div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro5.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">1.200,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Phòng trọ giá rẻ, có gác lửng, ở Ngũ Hành Sơn</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Ngũ Hành Sơn</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>15 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro6.jpg"  alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">900,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Phòng trọ sinh viên, gần nhiều khu vui chơi</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Ngũ Hành Sơn</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>22 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>         
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html">
+            <img src="../Images/tro6.jpg" alt="" class="cover img-reponsive" w>
+        </a>
+        <div class="room-item-price">
+            <a href="">2,500,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Trọ có gác lửng, gần chợ, có camera giám sát</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Liên Chiểu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>25 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                      
+
+
+
+ <div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro11.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">2,500,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Phòng trọ có điều hòa tủ lạnh chỉ 2,5 tr/tháng</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Cẩm Lệ</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>25 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                    
+
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro12.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">6,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Nhà trọ gần mặt đường,, có thể buôn bán </a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Hải Châu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>60 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Nhà trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                    
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro14.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">1,600,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Phòng trọ cho thuê giá rẻ, gần trường VKU</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Ngũ Hành Sơn</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>20 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Phòng trọ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                  
+     
+
+</div>
+</div>
+</div>
+                
+
+
+<div class="tab-pane " id="tab_type_3">
+      <div class="thumbnail-list">
+          <div class="row block-item">
+         
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="../Images/tro15.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">8,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Cho thuê nhà mặt tiền, có thể buôn bán  </a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Hòa Vang</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>100m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Nhà nguyên căn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                   
+
+
+  <div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html">
+            <img src="http://media.phongtot.vn/xc5tx4cj/nha-vua-o-vua-kinh-doanh-vi-tri-dac-dia-thumb-rjqh9.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">11,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Nhà vừa ở, vừa kinh doanh, vị trí đắc địa </a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Hải Châu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>120 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Nhà nguyên căn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>       
+
+
+ <div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html">
+            <img src="http://media.phongtot.vn/xc5tx4cj/nha-nguyen-can-cho-ho-gia-dinhsinh-vien-hoac-day-hoc-tai-nha-thumb-nbrnk.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">6,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Nhà nguyên căn cho gia đình/sinh viên hoặc dạy học tại nhà </a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Liên Chiểu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>65 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Nhà nguyên căn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                    
+
+</div>
+</div>
+</div>
+
+
+
+<div class="tab-pane" id="tab_type_4">
+   <div class="thumbnail-list">
+      <div class="row block-item">
+          
+
+    <div class="col-sm-6 col-md-4 thumbnail-item">
+     <div class="thumbnail">
+        <a href="thongtinnha.html" title="">
+            <img src="http://media.phongtot.vn/xc5tx4cj/cho-thue-can-ho-1k1n-tuyet-dep-o-my-dinh-ngo-to-o-to-do-cua-54-trthang-thumb-pfipo.jpg" alt="" class="cover img-reponsive"></a>
+        <div class="room-item-price"><a href="">5,500,000 Đ/tháng</a></div>
+          <div class="caption">
+            <div class="title"><h2><a href="">Cho thuê căn hộ tuyệt đẹp , ngõ to, ô tô đỗ cửa 5,5 tr/tháng</a></h2></div>
+               <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Sơn Trà</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>40 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Chung cư, căn hộ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                   
+
+
+ <div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.html">
+            <img src="../Images/tro16.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">20,000,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Căn hộ cho thuê gần biển Mỹ Khuê, tuyệt đẹp, thoáng mát</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Hải Châu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>70 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Chung cư, căn hộ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                    
+
+
+<div class="col-sm-6 col-md-4 thumbnail-item">
+    <div class="thumbnail">
+        <a href="thongtinnha.htmls" title="">
+            <img src="../Images/tro17.jpg" alt="" class="cover img-reponsive">
+        </a>
+        <div class="room-item-price">
+            <a href="">7,500,000 Đ/tháng</a>
+        </div>
+        <div class="caption">
+            <div class="title">
+                <h2><a href="">Cho thuê căn hộ cao cấp gần trung tâm Đà nẵng</a></h2>
+            </div>
+            <div class="extra">
+                <div class="pull-left">
+                    <a href="#"><span class="fa fa-map-marker"></span>Hải Châu</a>
+                </div>
+                <div class="pull-right">
+                    <a href=""><span class="fa fa-info"></span>65 m<sup>2</sup></a>
+                </div>
+                <div class="type">
+                    <a href=""><span class="fa fa-home"></span>Chung cư, căn hộ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>            
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+   <div align="center">
+         <ul class="pager" >   
+            <li class="page-item"><a class="page-link" href="" rel="next">«</a></li>
+            <li class="page-item active"><span class="page-link">1</span></li>
+            <li class="page-item"><a class="page-link" href="">2</a></li>
+            <li class="page-item"><a class="page-link" href="">3</a></li>
+            <li class="page-item"><a class="page-link" href="">4</a></li>
+            <li class="page-item"><a class="page-link" href="">5</a></li>
+            <li class="page-item"><a class="page-link" href="" rel="next">»</a></li>
+          </ul>
+   </div>
+
+
+<div class="footer-deco"></div>
+
+  <div class="row" style="padding: 20px 0;  background-color: #205597; color:#fff" align="center">
+    <div class="col-md-4">
+       <h3>Mục tiêu</h3>
+       <p>Chúng tôi với mục tiêu và sứ mạnh giúp các bạn tìm một chỗ ở<br> thật an toàn, cung cấp đầy đủ các thông tin phòng trọ,<br> nhà nguyên căn uy tín, giá rẻ tại thành phố <br>Đà Nẵng </p>
+    </div>
+    <div class="col-md-4" >
+       <h3>Dịch vụ</h3>
+        <div>
+         <p>Tìm phòng trọ,nhà trọ</p>
+         <p>Tìm bạn ở ghép</p>
+         <p>Cho thuê căn hộ</p>
+         <p>Cho thuê nhà nguyên căn</p>
+    </div>
+  </div>
+    <div class="col-md-4"   style="">
+       <h3>Liên hệ</h3>    
+     <div >
+          <p><i class="fas fa-home mr-3"></i> VKU</p>
+          <p ><i class="fas fa-envelope mr-3"></i> lvp.20it3@vku.udn.vn</p>
+          <p ><i class="fas fa-phone mr-3"></i> 0123456789</p>
+          <p ><i class="fas fa-print mr-3"></i> Gọi 113 nếu có vấn đề gấp </p>
+     </div>
+  </div>
+
+<div style="">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </div>
+<div style="margin-top: 15px; font-size: 12px">Copyright © 2021 - Lê Phú </div>
+  </div>
+
+
+
+     <script src="../Jscript/login.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
